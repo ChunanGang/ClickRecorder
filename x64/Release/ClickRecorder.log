@@ -1,6 +1,12 @@
-﻿  Generating code
-  221 of 453 functions (48.8%) were compiled, the rest were copied from previous compilation.
-    169 functions were new in current compilation
-    53 functions had inline decision re-evaluated but remain unchanged
+﻿  main.cpp
+C:\Users\chunanhu\Proj\ClickRecorder\Source\ClickRecorder.hpp(77,48): warning C4244: '=': conversion from 'ULONGLONG' to 'DWORD', possible loss of data
+C:\Users\chunanhu\Proj\ClickRecorder\Source\ClickRecorder.hpp(120,40): warning C4244: '=': conversion from 'ULONGLONG' to 'DWORD', possible loss of data
+C:\Users\chunanhu\Proj\ClickRecorder\Source\ClickRecorder.hpp(144,19): warning C4244: 'initializing': conversion from 'UINT64' to 'int', possible loss of data
+C:\Users\chunanhu\Proj\ClickRecorder\Source\ClickRecorder.hpp(145,19): warning C4244: 'initializing': conversion from 'UINT64' to 'int', possible loss of data
+C:\Users\chunanhu\Proj\ClickRecorder\Source\ClickRecorder.hpp(203,29): warning C4244: 'initializing': conversion from 'ULONGLONG' to 'DWORD', possible loss of data
+  Generating code
+  25 of 449 functions ( 5.6%) were compiled, the rest were copied from previous compilation.
+    2 functions were new in current compilation
+    11 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   ClickRecorder.vcxproj -> C:\Users\chunanhu\Proj\ClickRecorder\x64\Release\ClickRecorder.exe

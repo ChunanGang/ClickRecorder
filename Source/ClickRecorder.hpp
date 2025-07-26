@@ -16,7 +16,7 @@ struct Display
     UINT64 Height;
 } mainDisplay;
 
-std::vector<ClickInfo> clicks;
+std::vector<ClickInfo> recordedClicks;
 std::vector<std::string> playbackFiles;
 bool recording = false;
 DWORD curRecordStartTime = 0;
@@ -77,7 +77,7 @@ LRESULT CALLBACK MouseHookProc( int nCode, WPARAM wParam, LPARAM lParam )
             click.timestamp = GetTickCount64() - curRecordStartTime;
             click.isRightClick = ( wParam == WM_RBUTTONDOWN );
             click.isShiftPressed = ( GetAsyncKeyState( VK_SHIFT ) & 0x8000 ) != 0;
-            clicks.push_back( click );
+            recordedClicks.push_back( click );
             /*std::cout << "Recorded " << ( click.isRightClick ? "right" : "left" ) << " click at ("
                 << click.position.x << ", " << click.position.y << ")"
                 << ( click.isShiftPressed ? " with Shift pressed.\n" : ".\n" );*/
@@ -94,8 +94,8 @@ void StopRecoding()
 
     // save the recording to file
     std::string filePath = GetExecutablePath() + "\\" + "ClickRecord.txt";
-    SaveClicksToFile( clicks, filePath );
-    clicks.clear();
+    SaveClicksToFile( recordedClicks, filePath );
+    recordedClicks.clear();
 
     std::string soundFile = GetExecutablePath() + "\\Sounds\\" + "StopRecording.wav";
     PlaySound( ConvertStringToWString( soundFile ).c_str(), NULL, SND_FILENAME | SND_ASYNC );
@@ -103,6 +103,8 @@ void StopRecoding()
 
 void StartRecording( bool & forcedEnded )
 {
+    recordedClicks.clear();
+
     // Set the mouse hook to record mouse clicking
     if( mouseHook == NULL ) {
         mouseHook = SetWindowsHookEx( WH_MOUSE_LL, MouseHookProc, NULL, 0 );
@@ -187,7 +189,7 @@ void PlaybackClicks( UINT16 fileID, bool& forcedEnded )
         // no playback file for this hotkey
         return;
     }
-    clicks = LoadClicksFromFile( playbackFiles[ fileID ]);
+    std::vector<ClickInfo> clicks = LoadClicksFromFile( playbackFiles[ fileID ]);
 
     if( clicks.empty() ) {
         std::cout << "No clicks recorded.\n";
