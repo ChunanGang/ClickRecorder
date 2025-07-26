@@ -1,0 +1,12 @@
+# This file indicate which playback file to execute when a hotkey is hit.
+# Modify the file path as you wish. Support at most 3 files.
+# Lines start with # is comment and would not be read.
+
+# File1: this will be executed when ctrl+I is hit
+C:\Users\chunanhu\Proj\ClickRecorder\x64\Debug\ClickRecord.txt
+
+# File2: this will be executed when ctrl+O is hit
+C:\Users\chunanhu\Proj\ClickRecorder\x64\Debug\ClickRecord1.txt
+
+# File3: this will be executed when ctrl+P is hit
+# C:\Users\chunanhu\Proj\ClickRecorder\x64\Debug\ClickRecord.txt

@@ -1,0 +1,14 @@
+#pragma once
+#define _CRT_SECURE_NO_WARNINGS
+#include <windows.h>
+#include <shellscalingapi.h>
+#include <tdh.h>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <unordered_map>
+#include <vector>
+#include <chrono>
+#include <thread>
+#include <sstream>
+#include <ctime>

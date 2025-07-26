@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\Users\chunanhu\Proj\ClickRecorder\Source\ClickRecorder.hpp(77,48): warning C4244: '=': conversion from 'ULONGLONG' to 'DWORD', possible loss of data
+C:\Users\chunanhu\Proj\ClickRecorder\Source\ClickRecorder.hpp(118,40): warning C4244: '=': conversion from 'ULONGLONG' to 'DWORD', possible loss of data
+C:\Users\chunanhu\Proj\ClickRecorder\Source\ClickRecorder.hpp(143,19): warning C4244: 'initializing': conversion from 'UINT64' to 'int', possible loss of data
+C:\Users\chunanhu\Proj\ClickRecorder\Source\ClickRecorder.hpp(144,19): warning C4244: 'initializing': conversion from 'UINT64' to 'int', possible loss of data
+C:\Users\chunanhu\Proj\ClickRecorder\Source\ClickRecorder.hpp(203,29): warning C4244: 'initializing': conversion from 'ULONGLONG' to 'DWORD', possible loss of data
+  ClickRecorder.vcxproj -> C:\Users\chunanhu\Proj\ClickRecorder\x64\Debug\ClickRecorder.exe
